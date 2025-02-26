@@ -18,10 +18,23 @@ spec:
           ports:
             - name: http
               containerPort: 3000
-          envFrom:
-            - configMapRef:
-                name: app-config
-
+          env:
+            - name: APP_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: app-secret
+                  key: APP_NAME_CONFIG
+            - name: APP_VERSION
+              valueFrom:
+                secretKeyRef:
+                  name: app-secret
+                  key: APP_VERSION_CONFIG
+            - name: APP_AUTHOR
+              valueFrom:
+                secretKeyRef:
+                  name: app-secret
+                  key: APP_AUTHOR_CONFIG
+              
 ---
 apiVersion: v1
 kind: Service

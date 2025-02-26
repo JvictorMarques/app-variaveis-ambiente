@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: app-config
 data:
-  APP_NAME: "Aplicação ConfigMap"
-  APP_VERSION: "4.0"
-  APP_AUTHOR: "Joao"
+  APP_NAME_CONFIG: "Aplicação ConfigMap"
+  APP_VERSION_CONFIG: "4.0"
+  APP_AUTHOR_CONFIG: "Joao"
